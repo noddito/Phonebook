@@ -1,0 +1,154 @@
+body {
+    background: linear-gradient(to right bottom, rgb(238, 204, 255), rgb(106, 1, 96));
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.transparent {
+    position: relative;
+    max-width: 400px;
+    padding: 60px 50px;
+    margin: 50px auto 0;
+    background-size: cover;
+}
+
+.transparent:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.form-inner {
+    position: relative;
+}
+
+.form-inner h3 {
+    position: relative;
+    margin-top: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.form-inner h3:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    width: 60px;
+    background: rgba(224, 129, 255, 0.64);
+}
+
+.form-inner label {
+    display: block;
+    padding-left: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(243, 243, 243);
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.form-inner input {
+    display: block;
+    width: 100%;
+    padding: 0 15px;
+    margin: 10px 0 15px;
+    border-width: 0;
+    line-height: 40px;
+    border-radius: 20px;
+    color: white;
+    background: rgba(255, 255, 255, .2);
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-inner input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+#custom-checkbox + label {
+    position: relative;
+    margin: 20px 0;
+    text-transform: none;
+    cursor: pointer;
+}
+
+#custom-checkbox + label:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: text-top;
+    background: white;
+}
+
+#custom-checkbox:checked + label:before {
+    background: #9f17ee;
+}
+
+#custom-checkbox:checked + label:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    left: 20px;
+    top: 9px;
+    background: white;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    transform: rotate(45deg);
+}
+
+.form-inner input[type="submit"] {
+    background: rgba(110, 29, 228, 0.53);
+}
+
+.button:hover {
+    outline: 3px solid rgba(154, 71, 227, 0.46);
+}
+
+.table {
+    width: 100%;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.table thead th {
+    padding: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    color: #f3f3f3;
+    border-top: 2px solid rgba(255, 255, 255, .2);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+}
+
+.table tbody td {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #f3f3f3;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+
+}
+.delete {
+    display: block;
+    width: 100%;
+    padding: 0 15px;
+    margin: 10px 0 15px;
+    border-width: 0;
+    line-height: 40px;
+    border-radius: 20px;
+    color: white;
+    background: rgba(255, 0, 0, 0.55);
+    font-family: 'Roboto', sans-serif;
+}

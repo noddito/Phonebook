@@ -1,0 +1,26 @@
+version: '3'
+networks:
+    app_net:
+services:
+    nginx:
+        image: nginx:latest
+        volumes:
+            - ./:/var/www
+            - ./_docker/nginx/conf.d:/etc/nginx/conf.d
+        ports:
+            - "8876:80"
+        depends_on:
+            - php_app
+        container_name: phonebook_nginx
+        networks:
+            - app_net
+
+    php_app:
+        build:
+            context: .
+            dockerfile: _docker/app/Dockerfile
+        volumes:
+            - ./:/var/www
+        container_name: php_app
+        networks:
+            - app_net
